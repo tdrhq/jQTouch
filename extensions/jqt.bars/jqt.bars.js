@@ -167,7 +167,9 @@ is not recognized, like...
           win = window;
 
       jQT.barsSettings = {debug: false,
-                          autoLoad_iScroll: false};
+                          autoLoad_iScroll: false,
+			  showTabbar: false // show tabbar on start, -- likealittle
+			 };
 
       /*******************
        css section
@@ -505,10 +507,12 @@ is not recognized, like...
           });
 
           // Show tabbar now that it's been built
-          $('#tabbar').show(function () {
-            setPageHeight();
-            setBarWidth();
-          });
+          if (jQT.barsSettings.showTabbar) {
+              $('#tabbar').show(function () {
+		  setPageHeight();
+		  setBarWidth();
+              });
+	  }
         }
       }
       // End initTabbar()
