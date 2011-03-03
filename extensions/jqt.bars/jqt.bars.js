@@ -166,8 +166,8 @@ is not recognized, like...
           lastTime = (new Date()).getTime(),
           win = window;
 
-      jQT.barsSettings = {debug: true,
-                          autoLoad_iScroll: true};
+      jQT.barsSettings = {debug: false,
+                          autoLoad_iScroll: false};
 
       /*******************
        css section
